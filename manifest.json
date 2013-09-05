@@ -1,0 +1,18 @@
+{
+   "content_scripts": [ {
+      "css": [ "style.css" ],
+      "js": [ "jquery.js", "script.js" ],
+      "matches": [ "*://onderwijssso.tue.nl/*","*://educationsso.tue.nl/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "OaseRebellion",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7cUs4WqizFOC7817TA1w4dY5I+WI43IOM5jsQI4u0lAeDZAhrYwb3iKpPAfP35i+A1cMlCytD8Wonw60Wf1Xo59nuk45VV9uyp158J8n4bNUpDLSRSCgqmoNgt2IDin6j14SWN6tU+JkoVBMirBMuSLvN+l4CbVoaO4s1HoW3bwIDAQAB",
+   "manifest_version": 2,
+   "name": "OaseRebellion",
+   "page_action": {
+      "default_title": "OaseRebellion"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}
