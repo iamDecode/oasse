@@ -118,7 +118,7 @@ $(document).ready(function(){
 
 	var advSearchLink;
 	function buildAdvancedSearch(){
-		if ($('#ctl00_tue_pageTitle_lb_title').html()=="Activiteiten"){
+		if ($('#ctl00_tue_pageTitle_lb_title').html()=="Activiteiten" && $('#advancedSearchLink').length == 0){
 			advSearchLink  = $('<a id="advancedSearchLink" href="#" >Geavanceerd zoeken</a>');
 			$('#content .content-content').append(advSearchLink);
 
@@ -296,7 +296,7 @@ $(document).ready(function(){
 		improveTimetable();
 
 		//voor activiteiten, maar hoeven maar eenmalig
-		buildAdvancedSearch();
+		
 	}
 
 	function activiteitenFunctions(){
@@ -305,6 +305,7 @@ $(document).ready(function(){
 		activiteitenLoadingIndicator();
 		activiteitenSearchBar();
 		fixLinksStudiepakket();
+		buildAdvancedSearch();
 	}
 
 	function resultFunctions(){
