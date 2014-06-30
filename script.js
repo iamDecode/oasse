@@ -272,6 +272,17 @@ $(document).ready(function(){
 	   	}
 	});
 
+	function closeSavedContentBlocks(){
+		for(var i=0; i<localStorage.length; i++) {
+			var key = localStorage.key(i);
+			var block = $('.container-normal').eq(key);
+
+			//hide corner and content
+			block.children().eq(0).css('display', 'none');
+			block.children().eq(2).css('display', 'none');
+		}
+	}
+
 	function resizeFunctions(){
 		fullHeightContent();
 		fullWidthContent();
@@ -279,6 +290,7 @@ $(document).ready(function(){
 
 	function startFunctions(){
 		rearrangeContentBlocks();
+		closeSavedContentBlocks();
 		makeBadGradesRed();
 		showLoadersOnPageLoad();
 		improveTimetable();
@@ -331,5 +343,20 @@ $(document).ready(function(){
 
 	$(window).resize(function() { 
 		resizeFunctions();
+	});
+
+	//extend de toggle zodat hij persist in localStorage
+	$('.part-header-title').click(function(){
+		//how many-th block there is clicked on. (id's are unreliable) TODO: BETTER
+		var blockIndex = $(this).parent().parent().index();
+		//quick hack
+		if(blockIndex==7){blockIndex=4;}
+
+		if(typeof localStorage[blockIndex] == "undefined"){
+			localStorage.setItem(blockIndex, 1);
+		} else {
+			localStorage.removeItem(blockIndex);
+		}
+
 	});
 });
