@@ -237,10 +237,10 @@ $(document).ready(function(){
 			if ($(this).html() == "0"){
 				$(this).remove();
 			} else if ($(this).html() == "3"){
-				$(this).html("+ "+$(this).html()+"ECTS");
+				$(this).html("+"+$(this).html()+" ECTS");
 				$(this).parent().addClass('badge_blue');
-			} else if ($(this).html() == "6" || $(this).html() == "5"){
-				$(this).html("+ "+$(this).html()+"ECTS");
+			} else {
+				$(this).html("+"+$(this).html()+" ECTS");
 				$(this).parent().addClass('badge_pink');
 			}
 		});
