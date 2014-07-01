@@ -525,7 +525,7 @@ iframe { display: none !important; }
 #ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row,
 #ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row:nth-child(1) .list-column1,
 #ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row:nth-child(1) span,
-#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row:nth-child(9) span {
+#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row:nth-child(9) {
     display: none !important;
 }
 
@@ -533,27 +533,62 @@ iframe { display: none !important; }
     display: block !important;
 }
 
-#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row:nth-child(9){
-  display: block !important;
-  position: absolute !important;
-  top: -30px !important;
-  left: 235px !important;
-}
-
+/* dit vinkje werkt gewoon niet 
 #ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row:nth-child(9):after{
   content: "Zoek alleen in eigen studiepakket";
   position: absolute !important;
   width: 200px !important;
   top: 0px !important;
   left: 15px !important;
+}*/
+
+#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea {
+    display: block !important;
+    width: 600px !important;
+    margin: 15px 20px 0 0 !important; 
+    background: #fff !important;
+    border-radius: 3px !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0px !important;
 }
 
+#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea.show {
+    border: 1px solid #d1d1d1 !important;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1) !important;
+    padding: 5px 15px 0px 15px !important;
+}
+
+#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea.show::before {
+    content: "\25b2";
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: -13px;
+    text-shadow: 0px -2px 0px #d1d1d1;
+}
+
+#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea.show > div.list-row{
+    padding-bottom: 10px !important;
+}
+
+#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea.show .list-column1 {
+    padding-right: 20px !important;
+}
+
+#ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea.show > div.list-row:nth-child(1) input {
+    margin: 14px 0 30px -16px !important;
+}
+
+/* input bar and loading icon */
 #ctl00_m_g_dded696c_ebf5_4f42_82e8_4a83ed101731_ctl00_pnlSearchArea > div.list-row:nth-child(1) input {
     border: 1px solid #d1d1d1 !important;
     display: block !important;
     width: 400px !important;
     padding: 10px 15px !important;
-    margin: 20px 0 30px 0 !important;
+    margin: 20px 0 30px 0px !important;
     float: left !important;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1) !important;
     background: #fff !important;
